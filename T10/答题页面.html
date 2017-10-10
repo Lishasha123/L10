@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/weui.min.css" />
+		<link rel="stylesheet" href="css/weui.css" />
+		<link rel="stylesheet" href="js/example.css" />
+		<title></title>
+		<style type="text/css">
+body{
+	background-color: papayawhip;
+}
+
+h1.title {
+	margin: 30px 0;
+	font-weight: 400;
+	font-size: 34px;
+	color: #3cc51f;
+	text-align: center;
+}
+		</style>
+	</head>
+	<body>
+		
+	<div class="page__hd">
+        <h1 class="page__title">HTML(1/100)</h1>
+        <p class="page__desc">1. 移动端开发需要注意哪些方面的问题？</p>
+    </div>	
+		<div class="weui-cells weui-cells_checkbox">
+
+				<label class="weui-cell weui-check__label" for="a">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" name="checkbox1" class="weui-check" id="a">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+                    <p>A.standard is dealicient for u.</p>
+                </div>
+            </label>
+				<label class="weui-cell weui-check__label" for="b">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" name="checkbox1" id="b">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+                    <p>B.standard is dealt for u.</p>
+                </div>
+            </label>
+				<label class="weui-cell weui-check__label" for="c">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" name="checkbox1" class="weui-check" id="c">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+                    <p>C.standard is dealicient for u.</p>
+                </div>
+            </label>
+				<label class="weui-cell weui-check__label" for="d">
+                <div class="weui-cell__hd">
+                    <input type="checkbox" class="weui-check" name="checkbox1" id="d" checked="checked">
+                    <i class="weui-icon-checked"></i>
+                </div>
+                <div class="weui-cell__bd">
+                    <p>D.standard is dealt for u.</p>
+                </div>
+            </label>
+			</div>
+        
+  
+		<div id="login-loading" style="opacity: 0; display: none;">
+			<div class="weui-mask_transparent"></div>
+			<div class="weui-toast">
+				<i class="weui-loading weui-icon_toast"></i>
+				<p class="weui-toast__content">正在提交</p>
+			</div>
+		</div>
+		<div id="success" style="opacity: 0; display: none;">
+			<div class="weui-mask_transparent"></div>
+			<div class="weui-toast">
+				<i class="weui-icon-success-no-circle weui-icon_toast"></i>
+				<p class="weui-toast__content">已完成</p>
+			</div>
+		</div>
+		
+		<div class="weui-btn-area">
+            <a class="weui-btn weui-btn_primary" href="javascript:" id="showTooltips">提交</a>
+        </div> 
+			
+	</body>
+	
+	<script type="text/javascript" src="js/zepto.min.js" ></script>
+	<script type="text/javascript">
+		$("#showTooltips").click(function(){
+			$("#login-loading").fadeIn(200);
+			setTimeout(function(){
+				
+			$("#login-loading").fadeOut(100);	
+			$("#success").fadeIn(100);
+			setTimeout(function(){
+			$("#success").fadeOut(100);
+			},500);
+			
+			},3000)
+		})
+		
+	</script>
+</html>
